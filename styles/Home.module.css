@@ -108,6 +108,25 @@
   margin-left: 0.5rem;
 }
 
+.bgWrap {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bgText {
+  margin: 0;
+  font-size: 2rem;
+  color: #000;
+  line-height: 3rem;
+  text-align: center;
+  padding-top: 40vh;
+  text-shadow: 1px 1px 1px #3c5c5e;
+  z-index: 10;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

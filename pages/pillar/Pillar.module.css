@@ -1,0 +1,236 @@
+.pillar {
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  /* background: rgb(192,198,202);
+background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 100%); */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+
+.pillar_title > h1, .pillar_title_h3, .pillar_text{
+  color: #535c68;
+}
+
+
+.pillar_topLeft:hover, .pillar_topRight:hover,.pillar_bottomLeft:hover, .pillar_bottomRight:hover {
+  transform: scale(1.1);
+}
+
+/* TITLE */
+.pillar_title {
+  position: absolute;
+  text-align: center;
+}
+
+.title_topLeft {
+  background-color: #45aaf2;
+  position: relative;
+  top: 20%;
+  left: 15%;
+  width: 61%;
+  height: 27%;
+  z-index: 10;
+  padding: 0.5% 4% 2.5% 0;
+  text-align: right;
+
+
+}
+.title_topRight {
+  background-color: #3ae374;
+  position: relative;
+  top: 20%;
+  left: 20%;
+  width: 61%;
+  height: 27%;
+  z-index: 10;
+  padding: 0.5% 0 2.5% 4%;
+}
+.title_bottomLeft {
+  background-color: #ff9f1a;
+  position: relative;
+  top: -10%;
+  left: 15%;
+  width: 61%;
+  height: 27%;
+  z-index: 10;
+  padding: 2.5% 4% 0.5% 0;
+  text-align: right;
+
+}
+.title_bottomRight {
+  background-color: #cd84f1;
+  position: relative;
+  top: -10%;
+  left: 20%;
+  width: 61%;
+  height: 27%;
+  z-index: 10;
+  padding: 2.5% 0 0.5% 4%;
+}
+
+
+/* CIRCLE */
+.circleBig_topLeft {
+  background-color: #45aaf2;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius:100%;
+}
+.circleBig_topRight {
+  background-color: #3ae374;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius:100%;
+}
+.circleBig_bottomLeft{
+  background-color: #ff9f1a;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius:100%;
+}
+.circleBig_bottomRight{
+  background-color: #cd84f1;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius:100%;
+}
+
+.circleSmall_topLeft {
+  position: relative;
+  left: 50%;
+  top: -50%;
+  background-color: whitesmoke;
+  width: 50%;
+  height: 50%;
+  border-top-left-radius:100%;
+}
+.circleSmall_topRight{
+  position: relative;
+  left: 0%;
+  top: -50%;
+  background-color: whitesmoke;
+  width: 50%;
+  height: 50%;
+  border-top-right-radius:100%;
+}
+.circleSmall_bottomLeft {
+  position: relative;
+  left: 50%;
+  top: -100%;
+  background-color: whitesmoke;
+  width: 50%;
+  height: 50%;
+  border-bottom-left-radius:100%;
+}
+.circleSmall_bottomRight {
+  position: relative;
+  left: 0%;
+  top: -100%;
+  background-color: whitesmoke;
+  width: 50%;
+  height: 50%;
+  border-bottom-right-radius:100%;
+}
+
+
+/* ICON */
+.pillar_icon{
+  width: 30%;
+  height: 30%;
+  /* z-index: 100; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleBig_topLeft > .pillar_icon {
+  background-color: #82ccdd;
+  position: relative;
+  top: 15%;
+  left: 60%;
+}
+
+.circleBig_topRight > .pillar_icon {
+  background-color: #b8e994;
+  position: relative;
+  top: 15%;
+  left: 10%;
+}
+
+.circleBig_bottomLeft > .pillar_icon {
+  background-color: #f5cd79;
+  position: relative;
+  top: 55%;
+  left: 60%;
+}
+
+.circleBig_bottomRight > .pillar_icon {
+  background-color: #9980FA;
+  position: relative;
+  top: 55%;
+  left: 10%;
+}
+
+
+
+
+
+/* .pillar_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #C9C9CB;
+  height: 70vh;
+  width: 70vw;
+  margin-top: 8vh;
+}
+
+.businessIot_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 62vw;
+  margin:  2vh 0;
+}
+
+.businessPlatform, .iotPlatform {
+  background-color: #43546A;
+  padding: 5vh 0;
+  width: 30vw;
+  text-align: center;
+}
+
+.digitalization, .profService {
+  width: 62vw;
+  margin:  2vh 0;
+  background-color: #43546A;
+  padding: 5vh 0;
+  text-align: center;
+}
+
+.title_absolute{
+  position: absolute;
+  top: 10vh;
+  left: 15vw;
+  letter-spacing: 0.05em;
+}
+
+.image_absolute {
+  position: absolute;
+  bottom: 3vh;
+  left: 1vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10vw;
+}
+
+h4{
+  color: white;
+} */

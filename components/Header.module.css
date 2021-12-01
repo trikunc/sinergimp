@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+.Header {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh;
+  /* padding-top: 15px; */
+}
+
+.header__logoImg {
+  object-fit: contain;
+  flex: 1;
+  /* width: 150px; */
+  margin-right: 100px;
+}
+
+.header__links {
+  display: flex;
+  gap: 25px;
+  z-index: -10;
+  align-items: center;
+}
+
+.header__links > div > a {
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__right > div > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  z-index: 0;
+  position: relative;
+}
+
+.header__link--hidden {
+  visibility: hidden;
+}
+
+.header__menu > .MuiSvgIcon-root {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) and (max-width: 1220px) {
+  .header__logoImg {
+    width: 120px;
+    margin-right: 15px;
+  }
+
+  .header__links {
+    gap: 15px;
+  }
+
+  .header__links > div > a {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .header {
+    padding-left: 10px;
+  }
+
+  .header__logoImg {
+    margin-right: 15px;
+  }
+
+  .header__links {
+    gap: 14px;
+  }
+
+  .header__links > div > a {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .header {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .header__logoImg {
+    width: 70px;
+    margin-right: 8px;
+  }
+
+  .header__links {
+    gap: 12px;
+  }
+
+  .header__links > div > a {
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .header {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
+  .header__logoImg {
+    margin-right: 7px;
+  }
+
+  .header__links {
+    gap: 7px;
+  }
+
+  .header__links > div > a {
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+  }
+}

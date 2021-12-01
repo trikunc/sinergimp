@@ -14,3 +14,25 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* h4 {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #545557;
+  line-height: 200%;
+}
+
+h4:hover {
+  color: #000;
+} */
+
+h4,
+h1,
+p {
+  margin: 0px;
+  padding: 0px;
+}
