@@ -1,5 +1,5 @@
 module.exports = {
-  // reactStrictMode: true,
+  /* config options here */
 };
 
 // const withImages = require('next-images');

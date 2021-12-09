@@ -9,13 +9,17 @@ background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 
   justify-content: center;
 }
 
-
-.pillar_title > h1, .pillar_title_h3, .pillar_text{
+.pillar_title > h1,
+.pillar_title_h3,
+.pillar_text {
   color: #535c68;
+  line-height: 140%;
 }
 
-
-.pillar_topLeft:hover, .pillar_topRight:hover,.pillar_bottomLeft:hover, .pillar_bottomRight:hover {
+.pillar_topLeft:hover,
+.pillar_topRight:hover,
+.pillar_bottomLeft:hover,
+.pillar_bottomRight:hover {
   transform: scale(1.1);
 }
 
@@ -35,8 +39,6 @@ background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 
   z-index: 10;
   padding: 0.5% 4% 2.5% 0;
   text-align: right;
-
-
 }
 .title_topRight {
   background-color: #3ae374;
@@ -58,7 +60,6 @@ background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 
   z-index: 10;
   padding: 2.5% 4% 0.5% 0;
   text-align: right;
-
 }
 .title_bottomRight {
   background-color: #cd84f1;
@@ -71,31 +72,30 @@ background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 
   padding: 2.5% 0 0.5% 4%;
 }
 
-
 /* CIRCLE */
 .circleBig_topLeft {
   background-color: #45aaf2;
   width: 100%;
   height: 100%;
-  border-top-left-radius:100%;
+  border-top-left-radius: 100%;
 }
 .circleBig_topRight {
   background-color: #3ae374;
   width: 100%;
   height: 100%;
-  border-top-right-radius:100%;
+  border-top-right-radius: 100%;
 }
-.circleBig_bottomLeft{
+.circleBig_bottomLeft {
   background-color: #ff9f1a;
   width: 100%;
   height: 100%;
-  border-bottom-left-radius:100%;
+  border-bottom-left-radius: 100%;
 }
-.circleBig_bottomRight{
+.circleBig_bottomRight {
   background-color: #cd84f1;
   width: 100%;
   height: 100%;
-  border-bottom-right-radius:100%;
+  border-bottom-right-radius: 100%;
 }
 
 .circleSmall_topLeft {
@@ -105,16 +105,16 @@ background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 
   background-color: whitesmoke;
   width: 50%;
   height: 50%;
-  border-top-left-radius:100%;
+  border-top-left-radius: 100%;
 }
-.circleSmall_topRight{
+.circleSmall_topRight {
   position: relative;
   left: 0%;
   top: -50%;
   background-color: whitesmoke;
   width: 50%;
   height: 50%;
-  border-top-right-radius:100%;
+  border-top-right-radius: 100%;
 }
 .circleSmall_bottomLeft {
   position: relative;
@@ -123,7 +123,7 @@ background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 
   background-color: whitesmoke;
   width: 50%;
   height: 50%;
-  border-bottom-left-radius:100%;
+  border-bottom-left-radius: 100%;
 }
 .circleSmall_bottomRight {
   position: relative;
@@ -132,12 +132,11 @@ background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 
   background-color: whitesmoke;
   width: 50%;
   height: 50%;
-  border-bottom-right-radius:100%;
+  border-bottom-right-radius: 100%;
 }
 
-
 /* ICON */
-.pillar_icon{
+.pillar_icon {
   width: 30%;
   height: 30%;
   /* z-index: 100; */
@@ -169,15 +168,11 @@ background: linear-gradient(90deg, rgba(192,198,202,1) 43%, rgba(230,231,232,1) 
 }
 
 .circleBig_bottomRight > .pillar_icon {
-  background-color: #9980FA;
+  background-color: #9980fa;
   position: relative;
   top: 55%;
   left: 10%;
 }
-
-
-
-
 
 /* .pillar_wrap {
   display: flex;
