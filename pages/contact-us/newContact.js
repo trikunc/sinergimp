@@ -42,6 +42,7 @@ const NewContact = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [name, setNameSender] = useState('');
   const [email, setEmailSender] = useState('');
+  const [subject, setSubject] = useState('');
   const [text, setTextSender] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -54,9 +55,7 @@ const NewContact = () => {
       <Header
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
-        backColor={true}
         valueSize={valueSize}
-        defaultBack="black"
       />
       {isMenuOpen && <Menu valueSize={valueSize} />}
       <div className={styles.container}>
@@ -119,7 +118,8 @@ const NewContact = () => {
                     type="text"
                     name="name"
                     className={styles.input}
-                    id="name"
+                    onChange={(e) => setNameSender(e.target.value)}
+                    value={name}
                     required
                   />
                 </div>
@@ -131,7 +131,8 @@ const NewContact = () => {
                     type="email"
                     className={styles.input}
                     name="email"
-                    id="email"
+                    onChange={(e) => setEmailSender(e.target.value)}
+                    value={email}
                     required
                   />
                 </div>
@@ -144,7 +145,8 @@ const NewContact = () => {
                   type="text"
                   className={styles.input}
                   name="subject"
-                  id="subject"
+                  onChange={(e) => setSubject(e.target.value)}
+                  value={subject}
                   required
                 />
               </div>
@@ -156,6 +158,8 @@ const NewContact = () => {
                   className={styles.textarea}
                   name="message"
                   rows="10"
+                  onChange={(e) => setTextSender(e.target.value)}
+                  value={text}
                   required
                 ></textarea>
               </div>
