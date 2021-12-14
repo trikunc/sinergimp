@@ -9,7 +9,7 @@
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding-bottom: 20px;
   position: relative;
   color: #37517e;
@@ -43,6 +43,7 @@
   /* max-width: 960px; */
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-top: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -141,7 +142,8 @@
 
 .form_row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  /* flex-direction: row; */
   justify-content: space-between;
 }
 
@@ -159,6 +161,7 @@
 
 .form_button {
   width: 30%;
+  font-size: 10px;
 }
 
 .label {
@@ -216,7 +219,8 @@
     flex-direction: column;
   }
   .form_button {
-    width: 50%;
+    width: 40%;
+    font-size: 14px;
   }
 }
 

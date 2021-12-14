@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { LinkedIn } from '@mui/icons-material';
-
-import styles from './ContactUs.module.css';
+import { useEffect, useState } from 'react';
+import styles from './newContact.module.css';
+import Button from '../../components/Button';
 
 import Menu from '../../components/Menu';
 import Header from '../../components/Header';
+
+import WhereToVoteIcon from '@mui/icons-material/WhereToVote';
+import MailIcon from '@mui/icons-material/Mail';
+import CallIcon from '@mui/icons-material/Call';
 
 function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
@@ -40,10 +42,11 @@ function useWindowSize() {
   return windowSize;
 }
 
-const ContactUs = () => {
+const NewContact = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [name, setNameSender] = useState('');
   const [email, setEmailSender] = useState('');
+  const [subject, setSubject] = useState('');
   const [text, setTextSender] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -51,212 +54,152 @@ const ContactUs = () => {
   const { height, width } = size;
   const valueSize = height < width ? height : width;
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
-
-    setLoading(true);
-
-    try {
-      await axios.post(`https://kunc-medsos.herokuapp.com/api/reset/smp`, {
-        name,
-        email,
-        text,
-      });
-      console.log('Sending email', name, email, text);
-
-      // setEmailChecked(true);
-    } catch (error) {
-      // setErrorMsg(catchErrors(error));
-      console.error(error);
-    }
-    setLoading(false);
-    setNameSender('');
-    setEmailSender('');
-    setTextSender('');
-  };
-
-  const Styles = {
-    contentHeader: {
-      fontSize: valueSize > 425 ? valueSize * 0.03 : valueSize * 0.05,
-      color: '#545557',
-      lineHeight: '200%',
-    },
-    contentText: {
-      fontSize: valueSize > 425 ? valueSize * 0.023 : valueSize * 0.035,
-      color: 'white',
-    },
-    icon: { fontSize: valueSize * 0.04, color: 'white' },
-    contactContent: {
-      paddingLeft: '3vw',
-      paddingRight: '3vw',
-      height: '100%',
-      overflow: 'hidden',
-      height: '94vh',
-      width: '35vw',
-    },
-  };
-
   return (
-    <div className={styles.contactUs}>
-      <div
-        className={styles.borderBottom}
-        style={{
-          height: '6vh',
-          width: '100vw',
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-        // className={[styles.contactUs_header, styles.borderBottom]}
-      ></div>
+    <div className={styles.contact}>
       <Header
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
-        backColor={true}
         valueSize={valueSize}
-        defaultBack="black"
       />
       {isMenuOpen && <Menu valueSize={valueSize} />}
-      <div className={styles.contactUs_content}>
-        <div
-          style={{ height: '94vh', width: '20vw' }}
-          className={styles.borderRight}
-        ></div>
-        <div className={styles.borderRight} style={Styles.contactContent}>
-          <div>
+      <div className={styles.container}>
+        <div className={styles.section_title}>
+          <h2 className={styles.h2}>Contact Us</h2>
+          {/* <p>
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+            fugiat sit in iste officiis commodi quidem hic quas.
+          </p> */}
+        </div>
+
+        <div className={styles.row}>
+          <div className={styles.info_container}>
+            <div className={styles.info}>
+              <div>
+                <i className={styles.icon}>
+                  <WhereToVoteIcon />
+                </i>
+                <h4 className={styles.info_h4}>Location:</h4>
+                <p className={styles.info_p}>
+                  Jl. Gatot Subroto Kav. 32-34, Kelurahan Kuningan Timur,
+                  Kecamatan Setia Budi, Jakarta Selatan , 12950 Gedung Patra
+                  Jasa Office Tower, Lantai 17 Ruang 1702-1704
+                </p>
+              </div>
+
+              <div>
+                <i className={styles.icon}>
+                  <MailIcon />
+                </i>
+                <h4 className={styles.info_h4}>Email:</h4>
+                <p className={styles.info_p}>corporates@sinergimp.co.id</p>
+              </div>
+
+              <div className="phone">
+                <i className={styles.icon}>
+                  <CallIcon />
+                </i>
+                <h4 className={styles.info_h4}>Call:</h4>
+                <p className={styles.info_p}>+62 21 52900252</p>
+              </div>
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2306654660865!2d106.82094481476928!3d-6.233294495487948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e14e75e635%3A0x17cac5e60899157b!2sPatra%20Jasa%20Office%20Tower!5e0!3m2!1sen!2sid!4v1639038943456!5m2!1sen!2sid"
+                style={{ border: 0, width: '100%', height: 290 }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+
+              {/* <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                frameBorder="0"
+                style={{ border: 0, width: '100%', height: 290 }}
+                // style="border:0; width: 100%; height: 290px;"
+                allowFullScreen
+              ></iframe> */}
+            </div>
+          </div>
+
+          <div className={styles.form_container}>
             <form
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
+              action="forms/contact.php"
+              method="post"
+              role="form"
+              className={styles.form}
             >
-              <p
-                style={
-                  valueSize > 700
-                    ? {
-                        marginTop: valueSize * 0.32,
-                        fontSize: valueSize * 0.027,
-                        color: 'white',
-                      }
-                    : {
-                        marginTop: valueSize * 0.3,
-                        fontSize: valueSize * 0.035,
-                        color: 'white',
-                      }
-                }
-              >
-                feel free to contact us and we will get back to you as soon as
-                we can
-              </p>
-              <input
-                className={styles.contactInput}
-                type="text"
-                placeholder="name"
-                style={Styles.contentText}
-                onChange={(e) => setNameSender(e.target.value)}
-                value={name}
-                required
-              />
-              <input
-                className={styles.contactInput}
-                type="text"
-                placeholder="email address"
-                style={Styles.contentText}
-                onChange={(e) => setEmailSender(e.target.value)}
-                value={email}
-                required
-              />
-              <input
-                className={styles.contactInput}
-                type="text"
-                placeholder="tell us about it"
-                style={Styles.contentText}
-                onChange={(e) => setTextSender(e.target.value)}
-                value={text}
-                required
-              />
-              <button
-                disabled={
-                  name.length === 0 ||
-                  email.length === 0 ||
-                  text.length === 0 ||
-                  loading
-                }
-                className={styles.contactButton}
-                onClick={sendEmail}
-                style={Styles.contentText}
-              >
-                Send
-              </button>
+              <div className={styles.form_row}>
+                <div className={styles.form_group}>
+                  <label className={styles.label} htmlFor="name">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    className={styles.input}
+                    onChange={(e) => setNameSender(e.target.value)}
+                    value={name}
+                    required
+                  />
+                </div>
+                <div className={styles.form_group}>
+                  <label className={styles.label} htmlFor="name">
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    className={styles.input}
+                    name="email"
+                    onChange={(e) => setEmailSender(e.target.value)}
+                    value={email}
+                    required
+                  />
+                </div>
+              </div>
+              <div className={styles.form_group}>
+                <label className={styles.label} htmlFor="name">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  className={styles.input}
+                  name="subject"
+                  onChange={(e) => setSubject(e.target.value)}
+                  value={subject}
+                  required
+                />
+              </div>
+              <div className={styles.form_group}>
+                <label className={styles.label} htmlFor="name">
+                  Message
+                </label>
+                <textarea
+                  className={styles.textarea}
+                  name="message"
+                  rows="10"
+                  onChange={(e) => setTextSender(e.target.value)}
+                  value={text}
+                  required
+                ></textarea>
+              </div>
+              {/* <div className="my-3">
+                <div className="loading">Loading</div>
+                <div className="error-message"></div>
+                <div className="sent-message">
+                  Your message has been sent. Thank you!
+                </div>
+              </div> */}
+              <div className={styles.form_button_container}>
+                <div className={styles.form_button}>
+                  <Button text="Send Message" />
+                </div>
+              </div>
             </form>
           </div>
         </div>
-        <div
-          className={styles.borderRight}
-          style={{ height: '94vh', width: '10vw' }}
-        ></div>
-        <div
-          // className={styles.contactContent}
-          style={Styles.contactContent}
-        >
-          <div style={{ marginTop: valueSize * 0.12 }}>
-            <h4 style={Styles.contentHeader}>opening hours</h4>
-            <p style={Styles.contentText}>Monday - Friday</p>
-            <p style={Styles.contentText}>9am - 5pm</p>
-            <p style={Styles.contentText}>Weekend</p>
-            <p style={Styles.contentText}>Closed</p>
-          </div>
-
-          <div style={{ marginTop: valueSize * 0.04 }}>
-            <h4 style={Styles.contentHeader}>address</h4>
-            <p style={Styles.contentText}>
-              Jl. Gatot Subroto Kav. 32-34, Kelurahan Kuningan Timur, Kecamatan
-              Setia Budi, Jakarta Selatan , 12950 Gedung Patra Jasa Office
-              Tower, Lantai 17 Ruang 1702-1704
-            </p>
-          </div>
-
-          <div style={{ marginTop: valueSize * 0.04 }}>
-            <h4 style={Styles.contentHeader}>support</h4>
-            <p style={Styles.contentText}>corporates@sinergimp.co.id</p>
-            <p style={Styles.contentText}>+62 21 52900252</p>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.lineAbsolute}></div>
-
-      <div className={styles.textAbsolute}>
-        <p style={Styles.contentText}>say hi to the team</p>
-        <h1
-          className={styles.h1}
-          style={{
-            fontSize: valueSize > 768 ? valueSize * 0.12 : valueSize * 0.07,
-            color: 'white',
-          }}
-        >
-          Contact Us
-        </h1>
-      </div>
-
-      <div className={styles.sosmedAbsolute}>
-        <a
-          href="https://id.linkedin.com/company/sinergimp"
-          style={{ marginRight: valueSize * 0.025 }}
-        >
-          <LinkedIn style={Styles.icon} />
-          <h2 style={{ fontSize: valueSize * 0.025 }}>Linkedin</h2>
-        </a>
-        {/* <a href="https://google.com">
-          <WhatsApp style={Styles.icon} />
-          <h2 style={{ fontSize: valueSize * 0.025 }}>Whatsapp</h2>
-        </a> */}
       </div>
     </div>
   );
 };
 
-export default ContactUs;
+export default NewContact;

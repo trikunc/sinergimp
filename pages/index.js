@@ -1,7 +1,3 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-
 import Item from '../components/Item';
 import Header from '../components/Header';
 import Menu from '../components/Menu';
@@ -50,7 +46,8 @@ export default function Home() {
 
   const size = useWindowSize();
   const { height, width } = size;
-  const value = height < width ? height : width;
+  const valueSize = height < width ? height : width;
+  const value = height > width ? width : width;
   console.log(`height: ${height}, width: ${width}, value: ${value}`);
   return (
     <div style={{ position: 'relative' }}>
@@ -64,13 +61,20 @@ export default function Home() {
             <UnderMaintenance />
           </Route> */}
 
-      <Header
+      {/* <Header
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         backColor={true}
         valueSize={value}
       />
-      {isMenuOpen && <Menu valueSize={value} />}
+      {isMenuOpen && <Menu valueSize={value} />} */}
+
+      <Header
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        valueSize={valueSize}
+      />
+      {isMenuOpen && <Menu valueSize={valueSize} />}
       <div
         style={{
           height: '100vh',

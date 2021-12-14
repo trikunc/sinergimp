@@ -5,7 +5,7 @@ import styles from './Menu.module.css';
 function Menu({ valueSize }) {
   return (
     <div className={styles.menu}>
-      <Link href="/pillar">
+      <Link href="/pillar" passHref>
         <div className={styles.menuItem}>
           <h4 className={styles.h4} style={{ fontSize: valueSize * 0.023 }}>
             Our Pilar
@@ -13,14 +13,14 @@ function Menu({ valueSize }) {
         </div>
       </Link>
 
-      <Link style={{ textDecoration: 'none' }} href="/">
+      <Link href="/" passHref>
         <div className={styles.menuItem}>
           <h4 className={styles.h4} style={{ fontSize: valueSize * 0.023 }}>
             Blog
           </h4>
         </div>
       </Link>
-      <Link style={{ textDecoration: 'none' }} href="/contact-us">
+      <Link href="/contact-us" passHref>
         <div className={styles.menuItem}>
           <h4 className={styles.h4} style={{ fontSize: valueSize * 0.023 }}>
             Contact Us

@@ -78,7 +78,12 @@ function Header({
           {isMenuOpen ? (
             <CloseIcon style={{ fontSize: valueSize * 0.03 }} />
           ) : (
-            <MenuIcon style={{ color: 'white', fontSize: valueSize * 0.03 }} />
+            <MenuIcon
+              style={{
+                color: 'white',
+                fontSize: valueSize * 0.03,
+              }}
+            />
           )}
         </div>
       </div>
