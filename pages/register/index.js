@@ -44,6 +44,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [confirm_password, setConfirmPassword] = useState('');
 
   const size = useWindowSize();
   const { height, width } = size;
@@ -81,7 +82,7 @@ const Register = () => {
                   required
                 />
               </div>
-
+              
               <div className={styles.form_group}>
                 <label className={styles.label} htmlFor="email">
                   Email
@@ -95,7 +96,7 @@ const Register = () => {
                   required
                 />
               </div>
-
+              
               <div className={styles.form_group}>
                 <label className={styles.label} htmlFor="username">
                   Username
@@ -110,18 +111,34 @@ const Register = () => {
                 />
               </div>
               
-              <div className={styles.form_group}>
-                <label className={styles.label} htmlFor="password">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className={styles.input}
-                  name="password"
-                  onChange={(e) => setPassword(e.target.value)}
-                  value={password}
-                  required
-                />
+              <div className={styles.form_row}>
+                <div className={styles.form_group}>
+                  <label className={styles.label} htmlFor="password">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    className={styles.input}
+                    name="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                    required
+                  />
+                </div>
+
+                <div className={styles.form_group}>
+                  <label className={styles.label} htmlFor="confirm_password">
+                    Confirm Password
+                  </label>
+                  <input
+                    type="password"
+                    className={styles.input}
+                    name="confirm_password"
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    value={confirm_password}
+                    required
+                  />
+                </div>
               </div>
               
               <div className={styles.form_button_container}>
