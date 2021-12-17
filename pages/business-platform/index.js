@@ -109,12 +109,12 @@ const BusinessPlatform = () => {
       {isMenuOpen && <Menu valueSize={valueSize} />}
       <div className={styles._card}>
         <div className={styles._text}>
-          <h3 style={{ fontSize: valueSize * 0.04 }}>
-            With our experience and abilities, we are ready to help you.
+          <h3 style={{ fontSize: valueSize * 0.05 }}>
+            We provide it for you, use it according to your needs.
           </h3>
-          <p style={{ fontSize: valueSize * 0.025 }}>
-            We are experienced in developing systems and software, and securing
-            them.
+          <p style={{ fontSize: valueSize * 0.03 }}>
+            Our platform aims to facilitate the business of companies, education
+            sector and “UMKM”.
           </p>
         </div>
         <div className={styles._picture}>

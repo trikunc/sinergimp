@@ -52,7 +52,8 @@ const Login = () => {
       <div className={styles.container}>
         <div className={styles.section_title}>
           <h2 className={styles.h2}>
-            <Image src={Logo} width={"30%"} height={"30%"} alt="logo" /> Sinergi Merah Putih
+            <Image src={Logo} width={'30%'} height={'30%'} alt="logo" /> Sinergi
+            Merah Putih
           </h2>
         </div>
 
@@ -79,7 +80,7 @@ const Login = () => {
                   required
                 />
               </div>
-              
+
               <div className={styles.form_group}>
                 <label className={styles.label} htmlFor="password">
                   Password
@@ -93,18 +94,22 @@ const Login = () => {
                   required
                 />
               </div>
-              
+
               <div className={styles.form_button_container}>
                 <div className={styles.form_button}>
                   {/* <Link href="/dashboard" className={styles.link} passHref>
                     <Button text="Send Message" />
                   </Link> */}
-                  <Button text="Login" link={"/dashboard"}/>
+                  <Button text="Login" link={'/dashboard'} />
                 </div>
               </div>
 
-              <span>Don&#x27;t have account? <a href={"/register"}><strong>Create an account</strong></a></span>
-
+              <span>
+                Don&#x27;t have account?{' '}
+                <a href={'/register'}>
+                  <strong>Create an account</strong>
+                </a>
+              </span>
             </form>
           </div>
         </div>

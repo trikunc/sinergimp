@@ -51,19 +51,29 @@ function Header({
             <Link to="/iot">IOT PLATFORM</Link>
             <Link to="/">PLATFORM BISNIS</Link>
             <Link to="/">LAYANAN PROFESIONAL</Link> */}
-            <Link style={{ fontSize: valueSize * 0.02 }} href="/digitalization">
+            <Link
+              className={styles.header__nav}
+              style={{ fontSize: valueSize * 0.02 }}
+              href="/digitalization"
+            >
               DIGITALIZATION
             </Link>
-            <Link style={{ fontSize: valueSize * 0.02 }} href="/iot">
+            <Link
+              className={styles.header__nav}
+              style={{ fontSize: valueSize * 0.02 }}
+              href="/iot"
+            >
               IOT PLATFORM
             </Link>
             <Link
+              className={styles.header__nav}
               style={{ fontSize: valueSize * 0.02 }}
               href="/business-platform"
             >
               BUSINESS PLATFORM
             </Link>
             <Link
+              className={styles.header__nav}
               style={{ fontSize: valueSize * 0.02 }}
               href="/support-service"
             >

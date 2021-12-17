@@ -3,18 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/Page.module.css';
 
-// import image1 from '../../assets/img/Picture1.png';
-// import image2 from '../../assets/img/Picture4.png';
-
-import Digitalization_svg from '../../public/icon/Digitalization.svg';
-// import ProfService_svg from '../../assets/img/Professional Service.svg';
-
 import middlewareIcon from '../../public/icon/SMP icon Middleware.svg';
 import dashboardIcon from '../../public/icon/SMP icon Dashboard.svg';
 import reportIcon from '../../public/icon/SMP icon Reporting.svg';
 import assetIcon from '../../public/icon/SMP icon Asset.svg';
-// import girlIcon from '../../assets/icon/woman_code.svg';
-// import manlIcon from '../../assets/icon/man_code.svg';
 import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 
