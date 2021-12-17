@@ -169,6 +169,9 @@
   .form_title {
     font-size: 16px !important;
   }
+  .label {
+    font-size: small;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
