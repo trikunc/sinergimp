@@ -38,12 +38,12 @@ const Item = ({
             }
           >
             <div>
-              <h1 className={styles.h1} style={{ fontSize: valueSize * 0.04 }}>
+              <h1 className={styles.h1} style={{ fontSize: valueSize * 0.025 }}>
                 {title}
               </h1>
             </div>
             <div className={styles.item2_textDesc}>
-              <p className={styles.p} style={{ fontSize: valueSize * 0.02 }}>
+              <p className={styles.p} style={{ fontSize: valueSize * 0.015 }}>
                 {desc}
               </p>
             </div>

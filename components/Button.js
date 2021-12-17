@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Button.module.css';
+import Link from 'next/link';
 
 // function getWindowDimensions() {
 //   const { innerWidth: width, innerHeight: height } = window;
@@ -31,14 +32,14 @@ const Button = ({ imp, text, link, value }) => {
   // const value = height < width ? height : width;
   return (
     <div className={styles.button}>
-      <a
-        href={link}
+      <Link
+        href={`${link}`}
         style={{
           fontSize: value * 0.02,
         }}
       >
         {text}
-      </a>
+      </Link>
     </div>
   );
 };

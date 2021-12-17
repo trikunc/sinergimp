@@ -25,12 +25,12 @@
   gap: 25px;
   z-index: -10;
   align-items: center;
+  color: white;
 }
 
-.header__links > div > a {
+.header__nav {
   text-decoration: none;
   /* text-transform: uppercase; */
-  color: white;
   font-family: 'Cabin', sans-serif;
   font-weight: 500;
   font-size: 18px;
