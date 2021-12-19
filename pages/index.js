@@ -47,8 +47,7 @@ export default function Home() {
   const size = useWindowSize();
   const { height, width } = size;
   const valueSize = height < width ? height : width;
-  const value = height > width ? width : width;
-  console.log(`height: ${height}, width: ${width}, value: ${value}`);
+  console.log(`height: ${height}, width: ${width}, value: ${valueSize}`);
   return (
     <div style={{ position: 'relative' }}>
       {/* <Head>
@@ -95,7 +94,7 @@ export default function Home() {
           rightBtnTxt="See what we do"
           rightBtnLink="/digitalization"
           itemPosition="item__right"
-          valueSize={value}
+          valueSize={valueSize}
         />
         <Item
           // title="IOT PLATFORM"
@@ -109,7 +108,7 @@ export default function Home() {
           rightBtnTxt="See what we do"
           rightBtnLink="/iot"
           itemPosition="item__right"
-          valueSize={value}
+          valueSize={valueSize}
         />
 
         <Item
@@ -124,7 +123,7 @@ export default function Home() {
           rightBtnTxt="See what we do"
           rightBtnLink="/business-platform"
           itemPosition="item__center"
-          valueSize={value}
+          valueSize={valueSize}
         />
         <Item
           // title="LAYANAN PROFESIONAL"
@@ -138,7 +137,7 @@ export default function Home() {
           rightBtnTxt="See what we do"
           rightBtnLink="/support-service"
           itemPosition="item__left"
-          valueSize={value}
+          valueSize={valueSize}
         />
       </div>
     </div>

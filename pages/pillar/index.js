@@ -106,8 +106,7 @@ const Pillar = () => {
                   className={styles.pillar_text}
                   style={{ fontSize: valueSize * 0.018 }}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nihil, dolore, dolorem optio.
+                  Our aims to facilitate the business of companies.
                 </p>
               </div>
             </div>
@@ -139,8 +138,7 @@ const Pillar = () => {
                   className={styles.pillar_text}
                   style={{ fontSize: valueSize * 0.018 }}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nihil, dolore, dolorem optio.
+                  We will make it easy for you to use the IOT
                 </p>
               </div>
             </div>
@@ -182,8 +180,7 @@ const Pillar = () => {
                   className={styles.pillar_text}
                   style={{ fontSize: valueSize * 0.018 }}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nihil, dolore, dolorem optio.
+                  Transformation into the digital era is a necessity.
                 </p>
               </div>
             </div>
@@ -215,8 +212,7 @@ const Pillar = () => {
                   className={styles.pillar_text}
                   style={{ fontSize: valueSize * 0.018 }}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nihil, dolore, dolorem optio.
+                  We are experienced in developing systems and software.
                 </p>
               </div>
             </div>
@@ -234,35 +230,6 @@ const Pillar = () => {
           </p> */}
         </div>
       </div>
-
-      {/* TODO: Remove */}
-      {/* FIXME: Remove */}
-      {/* TODO: Remove */}
-      {/* TODO: Remove */}
-
-      {/* <div className="pillar_wrap">
-        <div className="businessIot_wrap">
-          <div className="businessPlatform">
-            <h3 style={{ fontSize: valueSize * 0.03 }}>Business Platform</h3>
-          </div>
-          <div className="iotPlatform">
-            <h3 style={{ fontSize: valueSize * 0.03 }}>IoT Platform</h3>
-          </div>
-        </div>
-        <div className="digitalization">
-          <h3 style={{ fontSize: valueSize * 0.03 }}>Digitalization</h3>
-        </div>
-        <div className="profService">
-          <h3 style={{ fontSize: valueSize * 0.03 }}>Professional Service</h3>
-        </div>
-      </div> */}
-      {/* <h1 className="title_absolute" style={{ fontSize: valueSize * 0.045 }}>
-        OUR 4 PILLARS
-      </h1>
-      <div className="image_absolute">
-        <img src={sinergiWhite} alt="SMP" style={{ width: valueSize * 0.15 }} />
-        <h4 style={{ fontSize: valueSize * 0.02 }}>PT SINERGI MERAH PUTIH</h4>
-      </div> */}
     </div>
   );
 };

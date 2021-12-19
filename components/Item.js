@@ -38,12 +38,12 @@ const Item = ({
             }
           >
             <div>
-              <h1 className={styles.h1} style={{ fontSize: valueSize * 0.025 }}>
+              <h1 className={styles.h1} style={{ fontSize: valueSize * 0.03 }}>
                 {title}
               </h1>
             </div>
             <div className={styles.item2_textDesc}>
-              <p className={styles.p} style={{ fontSize: valueSize * 0.015 }}>
+              <p className={styles.p} style={{ fontSize: valueSize * 0.02 }}>
                 {desc}
               </p>
             </div>
@@ -56,10 +56,15 @@ const Item = ({
             imp={styles.secondary}
             text={rightBtnTxt}
             link={rightBtnLink}
-            value={valueSize}
+            valueSize={valueSize}
           />
           {twoButtons && (
-            <Button imp={styles.primary} text={leftBtnTxt} link={leftBtnLink} />
+            <Button
+              imp={styles.primary}
+              text={leftBtnTxt}
+              link={leftBtnLink}
+              valueSize={valueSize}
+            />
           )}
         </div>
       </div>

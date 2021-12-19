@@ -35,7 +35,7 @@
   padding: 0;
 }
 
-.button__white > a {
+.button__white > a > h3 {
   color: #fdfdfd;
 }
 
@@ -48,7 +48,7 @@
     border-radius: 50px;
   }
 
-  .button > a {
+  .button > a > h3 {
     /* font-size: 10px; */
     font-weight: 600;
     width: 100%;

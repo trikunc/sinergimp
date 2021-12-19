@@ -52,3 +52,34 @@
 .h4:hover {
   color: #000;
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .menu {
+    min-width: 300px;
+    height: 37vh;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+  .menu {
+    min-width: 280px;
+    height: 35vh;
+  }
+}
+@media (min-width: 375px) and (max-width: 550px) {
+  .menu {
+    min-width: 260px;
+    height: 32vh;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .menu {
+    padding-left: 15px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    min-width: 200px;
+    height: 28vh;
+  }
+}
